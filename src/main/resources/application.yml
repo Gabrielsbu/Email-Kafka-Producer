@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      retries: 5
+      bootstrap-servers: ${spring.kafka.bootstrap-servers}
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: botdellead@gmail.com
+    password: T1808198@
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
